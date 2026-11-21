@@ -1,4 +1,17 @@
-package edu.icet.dto;
+package edu.icet.entity;
 
-public class ProductEntity {
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "customer")
+public class CustomerEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer customerId;
+    private String name;
+    private Integer age;
+    private String adress;
+    private String phoneNumber;
+    private String email;
 }
