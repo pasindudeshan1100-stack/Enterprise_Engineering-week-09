@@ -10,11 +10,12 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/customer")
 @RequiredArgsConstructor
+@RequestMapping("/customer")
 public class CustomerController {
 
     final CustmerService service;
+
     @PostMapping("/add")
     public boolean addCustomer(@RequestBody Customer customer){
         return service.addCustomer(customer);
