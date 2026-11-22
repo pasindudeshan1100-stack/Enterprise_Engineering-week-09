@@ -42,6 +42,6 @@ public class CustomerServiceImpl implements CustmerService {
 
     @Override
     public Customer serchById(Integer id) {
-        return null;
+        return new ModelMapper().map(customerRepository.findById(id),Customer.class);
     }
 }
