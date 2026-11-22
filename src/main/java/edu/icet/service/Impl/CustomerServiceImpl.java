@@ -7,6 +7,7 @@ import edu.icet.service.CustmerService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,8 @@ public class CustomerServiceImpl implements CustmerService {
 
     @Override
     public boolean deleteById(Integer id) {
-        return false;
+        customerRepository.deleteById(id);
+        return true;
     }
 
     @Override
